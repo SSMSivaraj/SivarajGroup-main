@@ -1,0 +1,29 @@
+.page { background: #f6f2e9; color: #1d2926; overflow-wrap: anywhere; }
+.page h1, .page h2, .page h3 { font-family: Georgia, serif; line-height: 1.15; }
+.page h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.page h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.page p { white-space: pre-line; line-height: 1.8; }
+.page a:focus-visible { outline: 3px solid #b88a3b; outline-offset: 5px; }
+.page section[id] { scroll-margin-top: 100px; }
+.label { color: #806024; font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; }
+.hero { position: relative; isolation: isolate; background: #e6e2da; }
+.heroImage { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.heroCopy { padding-block: clamp(3rem, 8vw, 7rem); max-width: 850px; }
+.hero a { color: inherit; }
+.photo { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
+.fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .45rem; min-height: 112px; padding: 1.25rem; border: 1px dashed #c9c5ba; color: #596660; background: #eeece6; font-size: .85rem; text-align: center; }
+.fallback small { color: #66736f; }
+.pendingStage { padding: 1.25rem; background: #fff; border: 1px solid #e6e2da; height: 100%; scroll-margin-top: 100px; }
+.pendingStage .fallback + .fallback { margin-top: .75rem; }
+.productPhoto { width: 100%; height: auto; max-height: 580px; object-fit: contain; background: #eeece6; }
+.copy { color: #596660; }
+.imageLayout [data-image-column]:not(:has(img, p, figcaption)), .imageLayout [data-photo-cell]:not(:has(img)) { display: none; }
+.imageLayout [data-image-column]:not(:has(img)) + [data-copy-column] { flex: 0 0 100%; width: 100%; max-width: 100%; }
+.imageLayout [data-photo-cell] { flex-grow: 1; }
+.pendingStage:not(:has(img)) { padding: 0; border: 0; background: transparent; height: auto; }
+.action { display: inline-block; padding: 12px 24px; background: #063f35; color: white; border-radius: 0; text-decoration: none; }
+.action:hover { background: #082f28; color: white; }
+.enquiry { background: #082f28; color: white; }
+.enquiry p { color: #e5ece8; }
+.enquiry .action { background: #e8c58e; color: #082f28; }
+@media (prefers-reduced-motion: reduce) { .page { scroll-behavior: auto; } }

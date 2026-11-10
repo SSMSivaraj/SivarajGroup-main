@@ -1,0 +1,29 @@
+.page { background: #f6f2e9; color: #1d2926; overflow-wrap: anywhere; }
+.page h2 { font: 400 clamp(1.8rem,3.4vw,3rem)/1.2 Georgia,serif; color: #063f35; margin-bottom: 1.5rem; max-width: 30ch; }
+.heroCopy { max-width: 760px; }
+.heroCopy nav { margin-bottom: 2rem; font-size: .875rem; }
+.heroCopy a { color: inherit; }
+.heroCopy h1 { margin-bottom: 1.5rem; }
+.heroCopy p { max-width: 65ch; line-height: 1.8; }
+.label { text-transform: uppercase; font-size: .75rem; letter-spacing: .14em; color: #806024; margin-bottom: 1rem; }
+.section { padding-block: clamp(2.75rem,6vw,5rem); scroll-margin-top: 100px; }
+.paper { background: #fff; }
+.range { list-style: none; padding: 0; margin: 1.75rem 0 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 2rem; }
+.range li { border-top: 1px solid #dcded4; padding: 1rem 0; line-height: 1.6; }
+.goods .catalogue { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+.catalogue li { padding: 0 0 1rem; }
+.catalogue img { aspect-ratio: 4 / 3; object-fit: cover; margin-bottom: 1rem; }
+.catalogue span { display: block; padding-top: .8rem; }
+.table { width: 100%; border-collapse: collapse; min-width: 420px; }
+.table caption { caption-side: bottom; font-size: .8rem; padding-top: 1rem; }
+.table th, .table td { padding: 1rem .75rem; border-bottom: 1px solid #dcded4; text-align: left; vertical-align: top; }
+.table thead { color: #063f35; background: #eeeae1; }
+.table tbody th { font-weight: 500; }
+.document { margin: 0; }
+.document img { object-fit: contain; aspect-ratio: 3 / 4; }
+.document figcaption { padding-top: 1rem; }
+.enquiry { background: #082f28; color: #fff; }
+.enquiry h2, .enquiry p, .enquiry .label { color: #e5ece8; }
+.page a:focus-visible { outline: 3px solid #b88a3b; outline-offset: 5px; }
+@media(max-width:767px) { .range, .goods .catalogue { grid-template-columns: minmax(0,1fr); } }
+@media(prefers-reduced-motion:reduce) { .page { scroll-behavior: auto; } }

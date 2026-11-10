@@ -1,0 +1,693 @@
+{
+  "TEXTILE": [
+    {
+      "page_code": "TEXTILE",
+      "section_code": "PAGE_HERO",
+      "heading": "Textile",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "INTRODUCTION",
+      "heading": "Spinning / Knitting / Weaving / Garmenting",
+      "subheading": null,
+      "body_content": "SSM Group supplies products for the textile and apparel industries. Its experienced team follows market and regulatory developments. The published profile describes 15 manufacturing units across Tamil Nadu, with integrated facilities processing yarn and fabric through to ready-made garments.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "GROUP_COMPANIES",
+      "heading": "A diversified group",
+      "subheading": null,
+      "body_content": "The SSM Group profile describes interests in steel fabrication, wind farming and education alongside textiles. Its vision is to build strong customer bonds and long-term relationships through manufacturing and supplying quality products.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "RESEARCH_DEVELOPMENT",
+      "heading": "Research & Development",
+      "subheading": null,
+      "body_content": "Market intelligence\nConsumer research\nProduct development",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "PRODUCT_PARTNERSHIP",
+      "heading": "Strategic Product Development Partnership",
+      "subheading": null,
+      "body_content": "Partnership in design and development\nInnovation",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "MANUFACTURING",
+      "heading": "Integrated Manufacturing",
+      "subheading": null,
+      "body_content": "Spinning to finishing – extrusion\nScale and compliance\nFibre-rich country and quality",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 50,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "CUT_N_SEW",
+      "heading": "Cut-n-Sew",
+      "subheading": null,
+      "body_content": "Skill development\nAutomation\nInstitutes and hiring tie-ups",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 60,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "PRODUCT_PROMOTION",
+      "heading": "Product Promotion",
+      "subheading": null,
+      "body_content": "Brand communication\nAdvertising, packaging and POS activities\nCustomer engagement",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 70,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "DISTRIBUTION",
+      "heading": "Distribution",
+      "subheading": null,
+      "body_content": "Supply chain management: factory to stores\nDistribution proximity\nLean inventory",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 80,
+      "is_active": true
+    },
+    {
+      "page_code": "TEXTILE",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 90,
+      "is_active": true
+    }
+  ],
+  "EDUCATION": [
+    {
+      "page_code": "EDUCATION",
+      "section_code": "PAGE_HERO",
+      "heading": "Education",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "EDUCATION",
+      "section_code": "INTRODUCTION",
+      "heading": "Schools & College",
+      "subheading": null,
+      "body_content": "SSM Group founded SSM Matriculation School in Kuttahupatty, Dindigul, and SSM Academy at Akkarai Patti on Dindigul–Palani High Road, with the aim of providing quality education for all students.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "EDUCATION",
+      "section_code": "INSTITUTIONS",
+      "heading": "SSM schools",
+      "subheading": null,
+      "body_content": "The published profile names SSM Matriculation Higher Secondary School and SSM Academy, which focuses on the CBSE curriculum. Learning emphasizes extracurricular activities so students can explore education as an enjoyable experience.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "EDUCATION",
+      "section_code": "LEARNING_ENVIRONMENT",
+      "heading": "Learning beyond academics",
+      "subheading": null,
+      "body_content": "The schools’ published approach combines academic achievement with life skills, an educational environment and amenities for overall development. Management aims to nurture individual qualities through students’ mental and physical wellbeing.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "EDUCATION",
+      "section_code": "ENGINEERING_COLLEGE",
+      "heading": "SSM Institute of Engineering and Technology",
+      "subheading": null,
+      "body_content": "SSM Institute of Engineering and Technology (SSMIET), established in 2011, aims to nurture students in engineering courses and provide quality technical education to deserving rural students, helping them emerge as employers rather than employees. The published profile describes equipped laboratories, smart classrooms, a student-friendly atmosphere, support for innate talents and counselling. It records academic achievement, success in competitions conducted by premier institutions, and graduates contributing to the workforce.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    },
+    {
+      "page_code": "EDUCATION",
+      "section_code": "EDUCATION_VISION",
+      "heading": "An ambition recorded in the published profile",
+      "subheading": null,
+      "body_content": "The old website records efforts to start a school following the Indian Council for Secondary Education (ICSE) curriculum. This is a published intention; completion has not been verified.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 50,
+      "is_active": true
+    },
+    {
+      "page_code": "EDUCATION",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 60,
+      "is_active": true
+    }
+  ],
+  "NATURAL_ENERGY": [
+    {
+      "page_code": "NATURAL_ENERGY",
+      "section_code": "PAGE_HERO",
+      "heading": "Natural Energy",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "NATURAL_ENERGY",
+      "section_code": "INTRODUCTION",
+      "heading": "Power Plants for Sustainable Green Energy",
+      "subheading": null,
+      "body_content": "The published profile describes a captive power plant at Pethappampatti on the Dharapuram–Pollachi road, intended to ensure a steady electricity supply for uninterrupted production.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "NATURAL_ENERGY",
+      "section_code": "ENERGY_INITIATIVES",
+      "heading": "Wind farming",
+      "subheading": null,
+      "body_content": "The Natural Energy page reports that wind farming began with 100 windmills and later exceeded 400, contributing 300 MW for manufacturing facilities. It reports that 90% of power consumed by the manufacturing units came from these windmills. These figures describe the published profile and have not been verified as current operating figures.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "NATURAL_ENERGY",
+      "section_code": "RESPONSIBLE_GROWTH",
+      "heading": "The published energy commitment",
+      "subheading": null,
+      "body_content": "The old Natural Energy page describes the company as a producer and user of 100% green energy. This is retained as a historical statement; the same page reports 90% wind-power consumption, so no current 100% renewable-energy claim is made here.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "NATURAL_ENERGY",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    }
+  ],
+  "BRANDS": [
+    {
+      "page_code": "BRANDS",
+      "section_code": "PAGE_HERO",
+      "heading": "Brands",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "BRANDS",
+      "section_code": "INTRODUCTION",
+      "heading": "Chennis",
+      "subheading": null,
+      "body_content": "Chennis is a brand by Sivaraj Spinning Mill, created for fashion-conscious young professionals seeking affordable clothing. Its casual collection is presented for different occasions and events, reflecting the attitude and vibrancy of a new generation.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "BRANDS",
+      "section_code": "CHENNIS_BRAND",
+      "heading": "The Chennis story",
+      "subheading": null,
+      "body_content": "The Brands page records a launch in 2011 and positions Chennis in casual wear, with ongoing innovation and attention to international trends and styling. The date is retained from that profile; other old-site news articles give a different launch year.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "BRANDS",
+      "section_code": "BRAND_PRODUCTS",
+      "heading": "Clothing across occasions",
+      "subheading": null,
+      "body_content": "Top and bottom wear\nSports and activewear\nInnerwear\nEthnic wear for men, women and children\nTraditional dhotis, shirts, trousers and T-shirts",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "BRANDS",
+      "section_code": "BRAND_EXPERIENCE",
+      "heading": "Beyond work",
+      "subheading": null,
+      "body_content": "The published collection addresses beyond-work clothing through Urban, Sport, Excursion and Club categories, with an emphasis on fit, styling and colour.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    },
+    {
+      "page_code": "BRANDS",
+      "section_code": "BRAND_STORY",
+      "heading": "Brand presence in India",
+      "subheading": null,
+      "body_content": "The published profile records an expanding Indian network and an ambition to become a national brand by 2020. This historical ambition is retained as context; its achievement has not been verified.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 50,
+      "is_active": true
+    },
+    {
+      "page_code": "BRANDS",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 60,
+      "is_active": true
+    }
+  ],
+  "COTTON_YARN": [
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "PAGE_HERO",
+      "heading": "Cotton Yarn",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "INTRODUCTION",
+      "heading": "Cotton yarn and speciality yarns",
+      "subheading": null,
+      "body_content": "The published portfolio describes a varied premium yarn range and development of blends and shades to meet changing customer requirements. Contact the team for current availability and specifications.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "YARN_RANGE",
+      "heading": "Published yarn range",
+      "subheading": null,
+      "body_content": "Slub Yarn\nNegative Slub Yarn\nInjection Slub Yarn\nPC Yarn\nYarn counts from 10s to 40s\nLycra Yarn\nBCI Cotton\nFair Trade\nOEKO tex Organic Cotton\nContamination free Yarn",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "YARN_CAPABILITIES",
+      "heading": "Value-added speciality yarn",
+      "subheading": null,
+      "body_content": "Melanges\nPackage Dyed\nGassed Mercerized Yarn\nZero Twist\nWrapper Yarn\nBamboo/Cotton\nModal/Cotton\nSoya/Cotton\nPolyester/Cotton\nBCI Cotton\nBMP cotton\n100% dyed yarn",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "APPLICATIONS",
+      "heading": "Published yarn specification",
+      "subheading": null,
+      "body_content": "100% cotton / combed hosiery\nRange: NE 16 to NE 44\nEnd use: knitted fabric\n\nThe source separately lists counts from 10s to 40s in its general range; both descriptions are retained without combining them into a new specification.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    },
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "QUALITY",
+      "heading": "Portfolio terminology",
+      "subheading": null,
+      "body_content": "BCI, Fair Trade and OEKO tex Organic Cotton are names used in the old product portfolio. They do not establish current certification scope or validity. Confirm requirements and supporting documents with our team.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 50,
+      "is_active": true
+    },
+    {
+      "page_code": "COTTON_YARN",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 60,
+      "is_active": true
+    }
+  ],
+  "KNITTED_FABRICS": [
+    {
+      "page_code": "KNITTED_FABRICS",
+      "section_code": "PAGE_HERO",
+      "heading": "Knitted Fabrics",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "KNITTED_FABRICS",
+      "section_code": "INTRODUCTION",
+      "heading": "Knitted fabrics",
+      "subheading": null,
+      "body_content": "The old portfolio describes manufacture and supply of knitted fabrics with varied lengths, colours and textures, a focus on raw-material quality and finish, competitive pricing and delivery before the stipulated time.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "KNITTED_FABRICS",
+      "section_code": "FABRIC_RANGE",
+      "heading": "Published fabric range",
+      "subheading": null,
+      "body_content": "100% cotton single jersey\nBurn out single jersey\n100% cotton double jersey\nLycra or spandex single jersey\nSlub single jersey\nGrey melange slub\nFleece\nFrench terry\nFrench terry slub\nGrey melange\nMicro or baby terry\nLacoste\nSequence\nFrench terry (inside brushed)\nDesign terry\nPique\nPique slub",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "KNITTED_FABRICS",
+      "section_code": "KNIT_STRUCTURES",
+      "heading": "From the product gallery",
+      "subheading": null,
+      "body_content": "Grey Melange\nSingle Jersey\nRib Fabric\nDouble Jersey\nInterlock\nBurn Out\nLycra Jersey\nSlub Jersey\nFrench Terry\nMicro Terry\nFleece\nPique Fabric",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "KNITTED_FABRICS",
+      "section_code": "APPLICATIONS",
+      "heading": "Applications of fabrics",
+      "subheading": null,
+      "body_content": "The old portfolio identifies apparel fabric as an application.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    },
+    {
+      "page_code": "KNITTED_FABRICS",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 50,
+      "is_active": true
+    }
+  ],
+  "WOVEN_FABRICS": [
+    {
+      "page_code": "WOVEN_FABRICS",
+      "section_code": "PAGE_HERO",
+      "heading": "Woven Fabrics",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "WOVEN_FABRICS",
+      "section_code": "INTRODUCTION",
+      "heading": "Woven fabrics",
+      "subheading": null,
+      "body_content": "The published range describes woven fabrics in different lengths, widths, colours, weights and prints. Fabrics are generally bleached, dyed or printed and receive final finishing processes before delivery.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "WOVEN_FABRICS",
+      "section_code": "FABRIC_RANGE",
+      "heading": "Materials in the published range",
+      "subheading": null,
+      "body_content": "Cotton fabric\nPolyester fabric\nBlended fabric\nRayon/viscose fabrics\nKurti Fabric\nPV Fabric\nLinen fabric",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "WOVEN_FABRICS",
+      "section_code": "WEAVE_CAPABILITIES",
+      "heading": "Types of woven fabric",
+      "subheading": null,
+      "body_content": "Poplin\nDenim\nPinpoint oxford\nCorduroy\nChambray\nCrepe\nOxford\nMelange\nFlannel\nRoyal oxford cloth\nDobby\nHerringbone fabric Kashmir silk\nKhadi\nGabardine",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "WOVEN_FABRICS",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    }
+  ],
+  "GARMENTS": [
+    {
+      "page_code": "GARMENTS",
+      "section_code": "PAGE_HERO",
+      "heading": "Garments",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "GARMENTS",
+      "section_code": "INTRODUCTION",
+      "heading": "Knitted garments",
+      "subheading": null,
+      "body_content": "The old Garments page describes manufacture of knitted garments for children, women and men. It highlights innovation and product features including colour fastness, shrink resistance, designs and patterns, and skin-friendly fabrics.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "GARMENTS",
+      "section_code": "PRODUCT_RANGE",
+      "heading": "The published garment collection",
+      "subheading": null,
+      "body_content": "Premium Wear\nShirts\nWedding Set\nInner Wear - Male\nDhoti\nInner Wear - Female\nTrousers\nJunior Dhoti & Shirts",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "GARMENTS",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    }
+  ],
+  "CREDENTIALS_CERTIFICATIONS": [
+    {
+      "page_code": "CREDENTIALS_CERTIFICATIONS",
+      "section_code": "PAGE_HERO",
+      "heading": "Certifications",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_CERTIFICATIONS",
+      "section_code": "INTRODUCTION",
+      "heading": "Quality commitment",
+      "subheading": null,
+      "body_content": "The old Quality page describes a centralized testing laboratory and quality-assurance tests for each batch of yarn before dispatch, with a focus on quality and consistency.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_CERTIFICATIONS",
+      "section_code": "QUALITY_SYSTEMS",
+      "heading": "Equipment in the testing laboratory",
+      "subheading": null,
+      "body_content": "Yarn Evenness Test — USTER TESTER – 6\nFiber Process control Test — HVI – 1000\nYarn Trash analyzer & appearance test — AFTS PRO USTER\nRKM Test — UTR-3\nClassimat / CSP Test — USTER QUANTEM CLA\nElectronic Twist Test — STATEX\nYarn Clearers — USTER QUANTEM – 2 & QUANTEM – 3\nCotton Trash Analysis — STATEX\nBaer sorting staple Testing — instrument not specified\nYarn TPI Testing — instrument not specified\nLea Strength Testing — STATEX",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_CERTIFICATIONS",
+      "section_code": "CERTIFICATION_GALLERY",
+      "heading": "Published certificate gallery",
+      "subheading": null,
+      "body_content": "The old Certifications page presents three certificate images. Their documents could not be retrieved for verification. Please contact our team for approved documents and current validity.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_CERTIFICATIONS",
+      "section_code": "COMPLIANCE",
+      "heading": "Published certification references",
+      "subheading": null,
+      "body_content": "The old Awards page names OEKO-TEX – Eco-Friendly and GOTS – Organic Cotton. It describes avoidance of harmful chemical substances in yarn production and production of yarn from organic fibres. These are historical references, not confirmation of current certificate validity.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 40,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_CERTIFICATIONS",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 50,
+      "is_active": true
+    }
+  ],
+  "CREDENTIALS_REWARDS": [
+    {
+      "page_code": "CREDENTIALS_REWARDS",
+      "section_code": "PAGE_HERO",
+      "heading": "Rewards",
+      "subheading": null,
+      "body_content": "",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 0,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_REWARDS",
+      "section_code": "INTRODUCTION",
+      "heading": "Recognition for export performance",
+      "subheading": null,
+      "body_content": "The old Awards page explains that export awards recognize the meritorious performance of top exporters and describes recognition as an encouragement to increase export capacity and competitiveness.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 10,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_REWARDS",
+      "section_code": "RECOGNITION",
+      "heading": "Best Exporter Award",
+      "subheading": null,
+      "body_content": "The old website states that the Government of India awarded an Exporter Trophy and Certificate for achieving the highest yarn exports in India under the EOU category. It does not provide an award year.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 20,
+      "is_active": true
+    },
+    {
+      "page_code": "CREDENTIALS_REWARDS",
+      "section_code": "ENQUIRY_BANNER",
+      "heading": "Let’s Build Something Together",
+      "subheading": null,
+      "body_content": "Speak with our team about your requirements and explore the next step.",
+      "button_text": null,
+      "button_url": null,
+      "display_order": 30,
+      "is_active": true
+    }
+  ]
+}

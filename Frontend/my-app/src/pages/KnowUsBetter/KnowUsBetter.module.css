@@ -1,0 +1,63 @@
+.page { background: #f6f2e9; color: #1d2926; overflow-wrap: anywhere; }
+.page h1, .page h2, .page h3 { font-family: Georgia, serif; line-height: 1.16; font-weight: 400; }
+.page h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
+.page h2 { font-size: clamp(2rem, 3.4vw, 3rem); }
+.page h3 { font-size: 1.6rem; }
+.page a:focus-visible, .page button:focus-visible, .page select:focus-visible { outline: 3px solid #b88a3b; outline-offset: 5px; }
+.hero { position: relative; padding: 3.5rem 0; background: #eeeae1; border-bottom: 1px solid #dedbd3; }
+.heroCopy { position: relative; z-index: 1; max-width: 760px; }
+.heroCopy nav { margin-bottom: 2rem; font-size: .875rem; }
+.heroCopy a { color: inherit; }
+.heroImage { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.heroCopy p { max-width: 620px; line-height: 1.8; }
+.leadershipHero { background: #fff; }
+.leadershipPhoto { width: 100%; max-height: 610px; aspect-ratio: 4 / 5; object-fit: contain; object-position: center bottom; }
+/* Only portrait framing differs; dimensions, copy, overlay and spacing stay shared. */
+.page .managementHero { background: #edf2e9; }
+.page .managementHero > img { left: auto; right: 0; width: 44%; object-fit: cover; object-position: center 10%; mix-blend-mode: multiply; }
+@media(max-width:767px) { .page .managementHero > img { width: 100%; object-position: center top; } }
+.label { color: #806024; text-transform: uppercase; font-size: .75rem; letter-spacing: .15em; font-weight: 600; margin-bottom: 1rem; }
+.copy { color: #53615b; line-height: 1.85; max-width: 75ch; }
+.copy p { white-space: pre-line; }
+.photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #eae7df; }
+.portrait { aspect-ratio: 4 / 5; object-position: center top; }
+.wide { aspect-ratio: 16 / 7; }
+.fallback { display: flex; align-items: center; justify-content: center; gap: .75rem; min-height: 88px; padding: 1.25rem; background: #ece9e2; color: #59645d; border: 1px solid #dedbd3; font-size: .875rem; }
+.section { padding: clamp(2.75rem, 6vw, 5.5rem) 0; scroll-margin-top: 100px; }
+.paper { background: #fff; }
+.action { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 46px; padding: .8rem 1.5rem; background: #063f35; color: #fff; text-decoration: none; border: 1px solid transparent; border-radius: 0; }
+.action:hover { background: #082f28; color: #fff; }
+.card { height: 100%; background: #fff; border: 1px solid #e6e2da; padding: clamp(1.3rem, 3vw, 2rem); }
+.index { display: block; font-size: .75rem; color: #806024; margin-bottom: 1rem; }
+.sourceNote { color: #53615b; font-size: .8rem; line-height: 1.7; }
+.archive { border-left: 2px solid #b88a3b; padding-left: 1rem; margin-top: 1.5rem; }
+.enquiry { background: #082f28; color: #fff; }
+.enquiry .copy, .enquiry .label { color: #e5ece8; }
+.enquiry .action { color: #082f28; background: #e8c58e; }
+.related { display: flex; flex-wrap: wrap; gap: 1rem; }
+.capabilities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; padding: 0; margin: 2rem 0 0; border-top: 1px solid #dedbd3; }
+.capabilities li { padding: 1.25rem 1rem; border-bottom: 1px solid #dedbd3; }
+.capabilities span { display: block; color: #806024; font-size: .75rem; margin-bottom: .5rem; }
+.map { width: 100%; height: auto; background: #f6f2e9; border: 1px solid #dedbd3; }
+.map text { font-family: inherit; fill: #53615b; font-size: 12px; }
+.marketList { columns: 4 12rem; padding-left: 1.25rem; line-height: 2; }
+.marketList li { break-inside: avoid; padding-left: .25rem; }
+.marketSelect { max-width: 360px; width: 100%; min-height: 46px; border: 1px solid #a6afa8; background: white; padding: .65rem; color: #1d2926; }
+.brand { border-top: 3px solid #b88a3b; background: #fff; padding: clamp(1.5rem, 4vw, 3.5rem); }
+.gallery figure { margin: 0; }
+.gallery figcaption { font-size: .8rem; color: #53615b; padding-top: .75rem; }
+.environmentHeading { max-width: 760px; margin-bottom: 2rem; }
+.environmentList { display: grid; gap: clamp(1.5rem, 3vw, 2.5rem); }
+.environmentItem { background: #fff; border: 1px solid #e1ddd3; overflow: hidden; scroll-margin-top: 100px; }
+.environmentPhoto { height: 100%; min-height: 240px; background: #ece9e2; }
+.environmentPhoto .photo { display: block; height: 100%; min-height: 280px; aspect-ratio: 4 / 3; }
+.environmentPhoto .fallback { height: 100%; min-height: 280px; border: 0; }
+.environmentCopy { padding: clamp(1.5rem, 3.5vw, 3rem); }
+.environmentCopy h3 { color: #063f35; font-size: clamp(1.6rem, 2.5vw, 2.1rem); }
+.environmentCopy .index { margin-bottom: .75rem; }
+@media (max-width: 767.98px) {
+  .hero { padding: 2.5rem 0; }
+  .leadershipPhoto { max-height: 400px; }
+  .capabilities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .marketList { columns: 2; font-size: .9rem; }
+}

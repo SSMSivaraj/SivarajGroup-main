@@ -1,0 +1,434 @@
+[
+  {
+    "image_id": 49,
+    "page_code": "COMPANY_PROFILE",
+    "section_code": "INTRODUCTION",
+    "image_size_bytes": "206112",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 48,
+    "page_code": "COMPANY_PROFILE",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "206112",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 52,
+    "page_code": "CSR",
+    "section_code": "COMMUNITY",
+    "image_size_bytes": "562882",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 51,
+    "page_code": "CSR",
+    "section_code": "EDUCATION",
+    "image_size_bytes": "98224",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 53,
+    "page_code": "CSR",
+    "section_code": "ENVIRONMENT",
+    "image_size_bytes": "67654",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 50,
+    "page_code": "CSR",
+    "section_code": "HEALTH_WELLBEING",
+    "image_size_bytes": "562882",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 54,
+    "page_code": "CSR",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "35456",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 40,
+    "page_code": "GARMENTING",
+    "section_code": "CUT_PANEL_CHECKING",
+    "image_size_bytes": "164915",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 39,
+    "page_code": "GARMENTING",
+    "section_code": "CUTTING",
+    "image_size_bytes": "285365",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 46,
+    "page_code": "GARMENTING",
+    "section_code": "ENQUIRY_BANNER",
+    "image_size_bytes": "302125",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 38,
+    "page_code": "GARMENTING",
+    "section_code": "FABRIC_INSPECTION",
+    "image_size_bytes": "308369",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 37,
+    "page_code": "GARMENTING",
+    "section_code": "FABRIC_STORE",
+    "image_size_bytes": "308369",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 36,
+    "page_code": "GARMENTING",
+    "section_code": "INTRODUCTION",
+    "image_size_bytes": "164915",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 43,
+    "page_code": "GARMENTING",
+    "section_code": "IRONING_FINISHING",
+    "image_size_bytes": "272012",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 44,
+    "page_code": "GARMENTING",
+    "section_code": "PACKING",
+    "image_size_bytes": "276223",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 35,
+    "page_code": "GARMENTING",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "164915",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 45,
+    "page_code": "GARMENTING",
+    "section_code": "QUALITY_CONTROL",
+    "image_size_bytes": "232970",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 41,
+    "page_code": "GARMENTING",
+    "section_code": "SEWING_UNIT_ONE",
+    "image_size_bytes": "251991",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 42,
+    "page_code": "GARMENTING",
+    "section_code": "SEWING_UNIT_TWO",
+    "image_size_bytes": "251991",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 55,
+    "page_code": "GLOBAL_PRESENCE",
+    "section_code": "CHENNIS_BRAND",
+    "image_size_bytes": "37555",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 56,
+    "page_code": "GLOBAL_PRESENCE",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "196614",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 47,
+    "page_code": "HOME_TEXTILES",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "47535",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 25,
+    "page_code": "KNITTING",
+    "section_code": "ENQUIRY_BANNER",
+    "image_size_bytes": "385437",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 20,
+    "page_code": "KNITTING",
+    "section_code": "INTRODUCTION",
+    "image_size_bytes": "509569",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 21,
+    "page_code": "KNITTING",
+    "section_code": "KNITTING_FLOOR",
+    "image_size_bytes": "385437",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 19,
+    "page_code": "KNITTING",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "385437",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 24,
+    "page_code": "KNITTING",
+    "section_code": "PRODUCT_CAPABILITY",
+    "image_size_bytes": "509569",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 23,
+    "page_code": "KNITTING",
+    "section_code": "QUALITY_CONTROL",
+    "image_size_bytes": "385437",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 22,
+    "page_code": "KNITTING",
+    "section_code": "TECHNOLOGY",
+    "image_size_bytes": "509569",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 4,
+    "page_code": "SPINNING",
+    "section_code": "BLOW_ROOM_PRIMARY",
+    "image_size_bytes": "307623",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 5,
+    "page_code": "SPINNING",
+    "section_code": "BLOW_ROOM_SECONDARY",
+    "image_size_bytes": "307623",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 10,
+    "page_code": "SPINNING",
+    "section_code": "CARDING",
+    "image_size_bytes": "403836",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 11,
+    "page_code": "SPINNING",
+    "section_code": "COMBER",
+    "image_size_bytes": "359133",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 8,
+    "page_code": "SPINNING",
+    "section_code": "DRAW_FRAME",
+    "image_size_bytes": "505684",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 6,
+    "page_code": "SPINNING",
+    "section_code": "INTRODUCTION",
+    "image_size_bytes": "375539",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 13,
+    "page_code": "SPINNING",
+    "section_code": "LINK_CONER_PRIMARY",
+    "image_size_bytes": "360318",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 14,
+    "page_code": "SPINNING",
+    "section_code": "LINK_CONER_SECONDARY",
+    "image_size_bytes": "357331",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 16,
+    "page_code": "SPINNING",
+    "section_code": "OE_BLOW_ROOM",
+    "image_size_bytes": "586529",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 17,
+    "page_code": "SPINNING",
+    "section_code": "OE_DRAW_FRAME",
+    "image_size_bytes": "505684",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 15,
+    "page_code": "SPINNING",
+    "section_code": "OE_WINDING",
+    "image_size_bytes": "496585",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 7,
+    "page_code": "SPINNING",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "396604",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 12,
+    "page_code": "SPINNING",
+    "section_code": "RING_SPINNING",
+    "image_size_bytes": "510724",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 9,
+    "page_code": "SPINNING",
+    "section_code": "SIMPLEX",
+    "image_size_bytes": "376392",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 18,
+    "page_code": "SPINNING",
+    "section_code": "YARN_CONDITIONING",
+    "image_size_bytes": "293665",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 33,
+    "page_code": "WEAVING",
+    "section_code": "DRAWING_IN",
+    "image_size_bytes": "199410",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 29,
+    "page_code": "WEAVING",
+    "section_code": "INSPECTION_PRIMARY",
+    "image_size_bytes": "523453",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 30,
+    "page_code": "WEAVING",
+    "section_code": "INSPECTION_SECONDARY",
+    "image_size_bytes": "523453",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 27,
+    "page_code": "WEAVING",
+    "section_code": "INTRODUCTION",
+    "image_size_bytes": "112492",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 34,
+    "page_code": "WEAVING",
+    "section_code": "LOOM_WEAVING",
+    "image_size_bytes": "216083",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 31,
+    "page_code": "WEAVING",
+    "section_code": "PACKING",
+    "image_size_bytes": "554792",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 26,
+    "page_code": "WEAVING",
+    "section_code": "PAGE_HERO",
+    "image_size_bytes": "112492",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 32,
+    "page_code": "WEAVING",
+    "section_code": "SIZING",
+    "image_size_bytes": "268567",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 28,
+    "page_code": "WEAVING",
+    "section_code": "WARPING",
+    "image_size_bytes": "112492",
+    "display_order": 0,
+    "is_active": true
+  },
+  {
+    "image_id": 1,
+    "page_code": "WELCOME_WAY",
+    "section_code": "FABRIC_ROLLS",
+    "image_size_bytes": "44728",
+    "display_order": 1,
+    "is_active": true
+  }
+]

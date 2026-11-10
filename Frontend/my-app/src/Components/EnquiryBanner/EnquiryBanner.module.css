@@ -1,0 +1,7 @@
+.banner { background:#082f28; color:#e5ece8; padding-block:clamp(2.75rem,6vw,5.5rem); }
+.banner h2,.banner h3,.banner p { color:#e5ece8; }
+.banner.banner h2 { font:400 clamp(1.8rem,3.4vw,3rem)/1.2 Georgia,serif; max-width:30ch; }
+.banner.banner p { line-height:1.8; }
+.banner a { display:inline-flex; align-items:center; justify-content:center; gap:1rem; min-height:46px; padding:.8rem 1.5rem; color:#082f28; background:#e8c58e; border:1px solid transparent; text-decoration:none; }
+.banner a:hover { background:#d8ae65; color:#082f28; }
+.banner a:focus-visible { outline:3px solid #e8c58e; outline-offset:5px; }

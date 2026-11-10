@@ -1,0 +1,11 @@
+.tabs { display:flex; flex-wrap:wrap; gap:.25rem 1.5rem; border-bottom:1px solid #d8d8cc; padding:1rem 0; min-width:0; font:inherit; }
+.tabs a { display:flex; align-items:center; min-height:48px; padding:.8rem .2rem; color:#063f35; text-decoration:none; border-bottom:2px solid transparent; }
+.tabs a[aria-current] { border-color:#b88a3b; font-weight:600; }
+.rail { display:flex; flex-wrap:wrap; gap:.65rem; list-style:none; margin:0; padding:.25rem; min-width:0; }
+.rail li { min-width:0; }
+.rail a { display:flex; align-items:center; gap:.65rem; min-height:48px; padding:.65rem 1rem; border:1px solid #d8d8cc; border-radius:4px; background:#fffdf7; color:#063f35; text-decoration:none; font-size:.9rem; }
+.rail a span { color:#806024; font-variant-numeric:tabular-nums; }
+.rail a[aria-current] { background:#063f35; color:white; border-color:#063f35; }
+.rail a[aria-current] span { color:#e8c58e; }
+.tabs a:focus-visible, .rail a:focus-visible { outline:3px solid #b88a3b; outline-offset:3px; }
+@media(max-width:767px) { .tabs,.rail { flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x proximity; max-width:100%; } .tabs a,.rail li { flex-shrink:0; scroll-snap-align:start; } }

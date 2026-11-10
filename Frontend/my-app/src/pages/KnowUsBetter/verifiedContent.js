@@ -1,0 +1,483 @@
+// Extracted from the existing Sivaraj website on 29 October 2026.
+// See docs/know-us-better-reference/verified-content.json and the mapping report.
+// Source wording and historical figures are deliberately retained; no SQL writes.
+export const verifiedContent = {
+  "reviewed": "2026-10-29",
+  "sources": [
+    "https://www.sivaraj.co.in/company-profile",
+    "https://www.sivaraj.co.in/management-team",
+    "https://www.sivaraj.co.in/csr",
+    "https://www.sivaraj.co.in/global-presence",
+    "https://www.sivaraj.co.in/brands"
+  ],
+  "company": [
+    {
+      "heading": "Legacy of Excellence",
+      "body_content": "From India’s ancient mastery of cotton farming to India’s journey into becoming a world renowned fashion hub and powered by India’s growing status as a technological powerhouse; our story connects India’s yesterday, today and tomorrow.\n\nSivaraj Spinning Mills is a distinguished member of the group of companies under Sri Shanmugavel Mills Group, a leading name in the Indian textile industry with 15 manufacturing units spread across Tamil Nadu, as well as diversified interests in steel fabrication, wind farming and education. We with over three decades of experience in textile industry, still leverage on robust research to leave remarkable foot-prints in the field of operation and be a domestic market leader across its four product portfolios: Yarn, Woven fabric, Knitted fabric and Readymade garments."
+    },
+    {
+      "heading": "Renowned Business House",
+      "body_content": "Sivaraj Spinning Mills is a unique organization with operations that begin at the cotton fields of India and end with an in-house readymade garments brand. With headquarters based in Coimbatore, state-of-the-art-manufacturing factories in Dindigul & Tirupur, and offices in Guntur, Bengaluru, Mumbai, Ahmedabad and Ludhiana. We boast a loyal fan following that includes the top business houses of India and exports to more than 60 countries worldwide."
+    },
+    {
+      "heading": "Perfection in Quality",
+      "body_content": "By understanding the ever-changing trends of the market, we offer our clients with excellent quality products that are well in accordance to fashion. Since inception, we have deployed relentless efforts not only to deliver the best quality but also to provide uncompromised services that meet and exceed customer expectations."
+    },
+    {
+      "heading": "Spectacular Growth",
+      "body_content": "With dedicated team of inspired professionals having extensive experience, we’ve grown from a small scale entrepreneurship to one of India’s most respected conglomerate. By embracing the latest developments in textile manufacturing & by doing continuous investments in plant & machinery for capacity enhancement, we target to double our revenues within the next two years. Our commitment to do business responsibly have enabled us to grow manifold and gain a repute. Over the years, we have created lasting value for all our stakeholders, put enduring smiles on the faces of Sivaraj Spinning Mills shareholders, customers, employees and the society at large."
+    },
+    {
+      "heading": "Our Philosophy",
+      "body_content": ""
+    },
+    {
+      "heading": "Vision",
+      "body_content": "Our aim is to be the most preferred brand globally and trusted partner for our clients to procure quality yarns, fabrics in the textile business, determined to meet customer needs by being flexible, agile, and dynamic."
+    },
+    {
+      "heading": "Mission",
+      "body_content": "To constantly focus on innovation, create a premium brand experience vital to stand out amongst other brands."
+    },
+    {
+      "heading": "Core Value",
+      "body_content": "Being innovative to achieve sustainable growth, Proven customer centric service, Commitment to operational excellence, Equity and respect for every stakeholder, Following transparent business practices, Commitment to environment sustainability"
+    }
+  ],
+  "management": [
+    {
+      "heading": "Introduction",
+      "body_content": "The management team comprises of young & energetic people from different streams with best industry talent. They put together the business strategy and undertake the most challenging assignments to uphold customer satisfaction, as well ensure the business objectives are met. They look to operations and formulate strategic decisions in an effective manner to take the business to the next level."
+    },
+    {
+      "heading": "Shri.K.Sivaraj",
+      "body_content": "Sivaraj is a versatile personality having more than 20 years of experience in Textile Garment & Manufacturing industry. Born & brought up in an entrepreneurial family background with exposure to every field of business, he is a true leader & visionary person. He is a qualified engineer & business graduate from Philadelphia University, USA. Proven himself as a successful entrepreneur throughout his career building new business and running 9 huge manufacturing operations.",
+      "subheading": "Managing Director"
+    },
+    {
+      "heading": "Subrata Pal",
+      "body_content": "A management graduate from leading business school, having an extensive experience of 18 years in Textile, Retail, Branding & Marketing, Business Development (B2B & B2C), Operations, multi-channel product distribution, E Commerce, strategizing businesses, developing new markets etc. He has worked in leading Textile and retail companies of India and having global exposure of Textile and Apparel industry in terms of working in North America and Europe markets. A proven leader of having track records of growing businesses multi-fold with sustainability. Well-versed with management skills in developing and implementing strategic plans to increase efficiency & effectiveness within a business.",
+      "subheading": "CEO – Apparel & Brand"
+    },
+    {
+      "heading": "Sanjay Drolia",
+      "body_content": "A textile veteran with 20 years of rare experience in both technical as well as commercial aspects. He is a Commerce graduate, ICWAI. Versatile knowledge of Operation, MIS, Costing, procurement, strategy, Project management, Marketing, Sales, IT and various process improvement initiatives\n\nHe has worked in top textiles companies of the country with global exposure.",
+      "subheading": "President – Weaving"
+    },
+    {
+      "heading": "Sendurgani",
+      "body_content": "An engineering graduate (Mechanical) from a reputed Engineering College in Tamil Nadu, having a sound knowledge and experience of 26 Years in Textile (Weaving) in the area of Production and Maintenance, New Product Developments. He has worked in leading weaving mills in Tamil Nadu, India and having exposure of export weaving products.\n\nA Proven leader of having track records of growing business by skills development and implementing strategic plans to increase the efficiency and effective of the business.",
+      "subheading": "GM – Operation Weaving"
+    },
+    {
+      "heading": "Moorthy",
+      "body_content": "Started his carrier as spinning Technologist in the Coimbatore textile hub. He served various spinning organisation ranging 50,000 to 100,000 Spindles. Has wide range of experience with internationally reputed brand machinery namely Rieter, Trutzschler, schalthorst, Muratech, LMW etc. In the midst of 1996 he joined in SSM Group and equipped himself with multi-faceted technologies in the area of HR, Quality Maintenance and production. Presently working as general manager in SSM group of Mills managing about one lakh spindles. With more than 23 years of experience in this group he has specialised in hosiery, wrap, and fancy yarn production.",
+      "subheading": "GM – Operation Spinning"
+    }
+  ],
+  "csr": [
+    {
+      "heading": "Introduction",
+      "body_content": "S. Chennimalai Gounder Charitable Trust embarks on a noble mission to transform the society as a whole, especially the people inhabited in the vicinity of Dindigul. As a diversified venture of Corporate Social Responsibility, we do involve in the following CSR activities that make the world a better place to live in."
+    },
+    {
+      "heading": "Rain Water Harvesting",
+      "body_content": "Dindigul and its outskirts are prone to drought. Taking into account this serious issue, it is resolved not to use underground water for the numerous processes performed in the units. Rain water harvesting structures have been constructed in various parts of the mills which provide sufficient water for the internal requirements of Shivaraj Spinning Mills. These formations provide sufficient water for our usage and recharge the ground water level. The farsighted scheme is implemented in all our units and educational institutions."
+    },
+    {
+      "heading": "Wind Mill",
+      "body_content": "Being a firm supporter of the “Go Green” movement, we create natural energy from wind power and make conscious efforts to reduce its carbon footprint. Taken the initiative of building wind mill from the year 2005. These wind mills are located in Tamilnadu. We are having more than 400 wind turbines in spread across Palladam and Udumalpet area. This has a capacity to generate 300 MW power. As on today 90% of power consumed for all manufacturing units are coming from these wind mills."
+    },
+    {
+      "heading": "Tree Plantation",
+      "body_content": "Tree plantation to increase the green cover that help in balancing the climate and the environment. By donating saplings and by taking responsibility to nurture them till the maturity stage we contribute to carbon reduction."
+    },
+    {
+      "heading": "SSM School",
+      "body_content": "SSM group initiated building institutions for the future generation. The beneficiaries are from the workforce of SSM, the people living in the neighbourhood of all the spinning mills and the families which migrate from other areas."
+    },
+    {
+      "heading": "Marriage Hall",
+      "body_content": "In order to fulfill the social commitment, S. Chennimalai Gounder Charitable Trust has constructed a marriage hall in Tirupur. Its architectural design, amenities, comforts and its location at the heart of the city make it a boon for the people of the city. A number of weddings, community meetings, welfare club functions, social get together are conducted in the hall making it an important land mark of the city."
+    },
+    {
+      "heading": "Free Food Distribution",
+      "body_content": ""
+    }
+  ],
+  "global": "Besides catering to the domestic market, we export our products to 60 Countries across five continents.",
+  "markets": [
+    {
+      "name": "Canada",
+      "originalName": "Canada",
+      "lat": 56.130366,
+      "lng": -106.34677099999999
+    },
+    {
+      "name": "Mexico",
+      "originalName": "Mexico",
+      "lat": 23.634501,
+      "lng": -102.55278399999997
+    },
+    {
+      "name": "USA",
+      "originalName": "USA",
+      "lat": 37.09024,
+      "lng": -95.71289100000001
+    },
+    {
+      "name": "Dominican Republic",
+      "originalName": "Dominican Republic",
+      "lat": 18.735693,
+      "lng": -70.16265099999998
+    },
+    {
+      "name": "Guatemala",
+      "originalName": "Guatemala",
+      "lat": 14.6349149,
+      "lng": -90.5068824
+    },
+    {
+      "name": "Honduras",
+      "originalName": "Honduras",
+      "lat": 15.199999,
+      "lng": -86.24190499999997
+    },
+    {
+      "name": "Argentina",
+      "originalName": "Argentina",
+      "lat": -38.416097,
+      "lng": -63.616671999999994
+    },
+    {
+      "name": "Bolivia",
+      "originalName": "Bolivia",
+      "lat": -16.290154,
+      "lng": -63.58865300000002
+    },
+    {
+      "name": "Brazil",
+      "originalName": "Brazil",
+      "lat": -14.235004,
+      "lng": -51.92527999999999
+    },
+    {
+      "name": "Chile",
+      "originalName": "Chile",
+      "lat": -35.675147,
+      "lng": -71.54296899999997
+    },
+    {
+      "name": "Colombia",
+      "originalName": "Colombia",
+      "lat": 4.570868,
+      "lng": -74.29733299999998
+    },
+    {
+      "name": "Peru",
+      "originalName": "Peru",
+      "lat": -9.189967,
+      "lng": -75.015152
+    },
+    {
+      "name": "Venezuela",
+      "originalName": "Venezuela",
+      "lat": 6.42375,
+      "lng": -66.58973000000003
+    },
+    {
+      "name": "Egypt",
+      "originalName": "Egypt",
+      "lat": 26.820553,
+      "lng": 30.802498000000014
+    },
+    {
+      "name": "Madagascar",
+      "originalName": "Madagascar",
+      "lat": -18.766947,
+      "lng": 46.869106999999985
+    },
+    {
+      "name": "Mauritius",
+      "originalName": "Mauritius",
+      "lat": -20.348404,
+      "lng": 57.55215199999998
+    },
+    {
+      "name": "Morocco",
+      "originalName": "Morocco",
+      "lat": 31.791702,
+      "lng": -7.092620000000011
+    },
+    {
+      "name": "South Africa",
+      "originalName": "South Africa",
+      "lat": -30.559482,
+      "lng": 22.937505999999985
+    },
+    {
+      "name": "Swaziland",
+      "originalName": "Swaziland",
+      "lat": -26.522503,
+      "lng": 31.465866000000005
+    },
+    {
+      "name": "Tunisia",
+      "originalName": "Tunisia",
+      "lat": 33.886917,
+      "lng": 9.537499000000025
+    },
+    {
+      "name": "Belgium",
+      "originalName": "Belgium",
+      "lat": 50.503887,
+      "lng": 4.4699359999999615
+    },
+    {
+      "name": "Croatia",
+      "originalName": "Croatia",
+      "lat": 45.1,
+      "lng": 15.200000100000011
+    },
+    {
+      "name": "Czech Republic",
+      "originalName": "Czech Republic",
+      "lat": 49.81749199999999,
+      "lng": 15.472962000000052
+    },
+    {
+      "name": "Denmark",
+      "originalName": "Denmark",
+      "lat": 56.26392,
+      "lng": 9.50178500000004
+    },
+    {
+      "name": "France",
+      "originalName": "France",
+      "lat": 46.227638,
+      "lng": 2.213749000000007
+    },
+    {
+      "name": "Germany",
+      "originalName": "Germany",
+      "lat": 51.165691,
+      "lng": 10.451526000000058
+    },
+    {
+      "name": "Greece",
+      "originalName": "Greece",
+      "lat": 39.074208,
+      "lng": 21.824311999999964
+    },
+    {
+      "name": "Italy",
+      "originalName": "Italy",
+      "lat": 41.87194,
+      "lng": 12.567379999999957
+    },
+    {
+      "name": "Netherlands",
+      "originalName": "Netherland",
+      "lat": 52.132633,
+      "lng": 5.2912659999999505
+    },
+    {
+      "name": "Poland",
+      "originalName": "Poland",
+      "lat": 51.919438,
+      "lng": 19.14513599999998
+    },
+    {
+      "name": "Portugal",
+      "originalName": "Portugal",
+      "lat": 39.39987199999999,
+      "lng": -8.224454000000037
+    },
+    {
+      "name": "Romania",
+      "originalName": "Romania",
+      "lat": 45.943161,
+      "lng": 24.966760000000022
+    },
+    {
+      "name": "Slovenia",
+      "originalName": "Slovenia",
+      "lat": 46.151241,
+      "lng": 14.995462999999972
+    },
+    {
+      "name": "Spain",
+      "originalName": "Spain",
+      "lat": 40.46366700000001,
+      "lng": -3.7492200000000366
+    },
+    {
+      "name": "United Kingdom",
+      "originalName": "United Kingdom",
+      "lat": 55.378051,
+      "lng": -3.43597299999999
+    },
+    {
+      "name": "Ukraine",
+      "originalName": "Ukraine",
+      "lat": 48.379433,
+      "lng": 31.16557990000001
+    },
+    {
+      "name": "Israel",
+      "originalName": "Israel",
+      "lat": 31.046051,
+      "lng": 34.85161199999993
+    },
+    {
+      "name": "Turkey",
+      "originalName": "Turkey",
+      "lat": 38.963745,
+      "lng": 35.243322000000035
+    },
+    {
+      "name": "Lithuania",
+      "originalName": "Lithuania",
+      "lat": 55.169438,
+      "lng": 23.88127499999996
+    },
+    {
+      "name": "Bahrain",
+      "originalName": "Bahrain",
+      "lat": 26.0667,
+      "lng": 50.55770000000007
+    },
+    {
+      "name": "Saudi Arabia",
+      "originalName": "Saudi Arabia",
+      "lat": 23.885942,
+      "lng": 45.079162
+    },
+    {
+      "name": "UAE",
+      "originalName": "UAE",
+      "lat": 23.424076,
+      "lng": 53.84781799999996
+    },
+    {
+      "name": "China",
+      "originalName": "China",
+      "lat": 35.86166,
+      "lng": 104.19539699999996
+    },
+    {
+      "name": "Russia",
+      "originalName": "Russia",
+      "lat": 61.52401,
+      "lng": 105.31875600000001
+    },
+    {
+      "name": "Bangladesh",
+      "originalName": "Bangladesh",
+      "lat": 23.684994,
+      "lng": 90.35633099999995
+    },
+    {
+      "name": "Pakistan",
+      "originalName": "Pakistan",
+      "lat": 30.375321,
+      "lng": 69.34511599999996
+    },
+    {
+      "name": "Sri Lanka",
+      "originalName": "Srilanka",
+      "lat": 7.873053999999999,
+      "lng": 80.77179699999999
+    },
+    {
+      "name": "Hong Kong",
+      "originalName": "Hong Kong",
+      "lat": 22.396428,
+      "lng": 114.10949700000003
+    },
+    {
+      "name": "Indonesia",
+      "originalName": "Indonesia",
+      "lat": -0.789275,
+      "lng": 113.92132700000002
+    },
+    {
+      "name": "Japan",
+      "originalName": "Japan",
+      "lat": 36.204824,
+      "lng": 138.252924
+    },
+    {
+      "name": "Korea",
+      "originalName": "Korea",
+      "lat": 37.66399759999999,
+      "lng": 127.97845849999999
+    },
+    {
+      "name": "Macao",
+      "originalName": "Macao",
+      "lat": 22.198745,
+      "lng": 113.54387300000008
+    },
+    {
+      "name": "Malaysia",
+      "originalName": "Malaysia",
+      "lat": 4.210484,
+      "lng": 101.97576600000002
+    },
+    {
+      "name": "Philippines",
+      "originalName": "Philippines",
+      "lat": 12.879721,
+      "lng": 121.77401699999996
+    },
+    {
+      "name": "Singapore",
+      "originalName": "Singapore",
+      "lat": 1.352083,
+      "lng": 103.81983600000001
+    },
+    {
+      "name": "Taiwan",
+      "originalName": "Taiwan",
+      "lat": 23.69781,
+      "lng": 120.96051499999999
+    },
+    {
+      "name": "Thailand",
+      "originalName": "Thailand",
+      "lat": 15.870032,
+      "lng": 100.99254100000007
+    },
+    {
+      "name": "Vietnam",
+      "originalName": "Vietnam",
+      "lat": 14.058324,
+      "lng": 108.277199
+    },
+    {
+      "name": "Australia",
+      "originalName": "Australia",
+      "lat": -25.274398,
+      "lng": 133.77513599999997
+    },
+    {
+      "name": "New Zealand",
+      "originalName": "Newzealand",
+      "lat": -40.900557,
+      "lng": 174.88597100000004
+    },
+    {
+      "name": "India",
+      "originalName": "India",
+      "lat": 20.593684,
+      "lng": 78.96288000000004
+    }
+  ],
+  "brand": [
+    {
+      "heading": "Chennis",
+      "body_content": "A brand by Sivaraj Spinning Mill\n\nChennis was launched in 2011 to cater today’s fashion-conscious and discerning young professionals at an affordable price is an instant hit with the young working professionals. The Brand has a premium casual collection to cater the needs of consumers who are looking for dressing up for life across occasions and events. It reflects the pulse of the new generation which looks at clothing as a reflection of their attitude and vibrancy.\n\nOur brand Caters to all segments of consumers – Top & Bottom wear, Sports & Active wear, Innerwear and Ethnic wear for Men, Women and Kids. With exceptional fits, styling and color range, Chennis features a spectrum of men’s lifestyle products comprising of traditional dhotis, shirts, trousers and t-shirts.\n\nChennis has been the preferred choice of brand in the casual wear segment with continuous innovations and international trends and styling. It is positioned to meet the consumer needs for “beyond work” requirements and this has been addressed through categories like Urban, Sport, Excursion and Club. Chennis Brand Presence in India Expanding network in other part of the country and aim to become a National brand by 2020"
+    }
+  ]
+}
