@@ -1,3 +1,4 @@
+import { navigationGroups } from '../../config/navigation.js'
 import { useState } from 'react'
 import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap'
 import { NavLink, useLocation } from 'react-router-dom'
@@ -5,20 +6,7 @@ import logo from '../../assets/sivaraj-spinning-mills-logo.png'
 import HeaderGraphics from './HeaderGraphics.jsx'
 import graphicsStyles from './HeaderGraphics.module.css'
 
-const links = [
-  ['Welcome Way', '/'], ['Know Us Better', '/know-us-better'],
-  ['Enlightenment', '/enlightenment'], ['Framework', '/framework'], ['Goods', '/goods'],
-  ['Credentials', '/credentials'], ['Logo Marquee', '/logo-marquee'],
-]
 const colors = { green: '#063F35', gold: '#B88A3B', text: '#1D2926', border: '#E6E2DA' }
-const dropdowns = {
-  '/credentials': [['Certifications', 'certifications'], ['Rewards', 'rewards']],
-  '/know-us-better': [['Company Profile', 'company-profile'], ['Management Team', 'management-team'], ['CSR', 'csr'], ['Global Presence', 'global-presence']],
-  '/enlightenment': [['Textile', 'textile'], ['Education', 'education'], ['Natural Energy', 'natural-energy'], ['Brands', 'brands']],
-  '/framework': [['Spinning', 'spinning'], ['Knitting', 'knitting'], ['Weaving', 'weaving'], ['Garmenting', 'garmenting'], ['Home Textiles', 'home-textiles']],
-  '/goods': [['Cotton Yarn', 'cotton-yarn'], ['Knitted Fabrics', 'knitted-fabrics'], ['Woven Fabrics', 'woven-fabrics'], ['Garments', 'garments']],
-}
-
 export default function SiteHeader() {
   const { pathname } = useLocation()
   const [dropdownOpen, setDropdownOpen] = useState(null)
@@ -39,7 +27,7 @@ export default function SiteHeader() {
         </div>
         <Navbar.Collapse className={`pb-3 pb-xl-0 ${pathname === '/' ? graphicsStyles.navigation : ''}`}>
           <Nav className="ms-auto align-items-stretch align-items-xl-center">
-            {links.map(([label, path]) => dropdowns[path] ? (
+            {navigationGroups.map(({ label, path, children }) => children.length ? (
               <Dropdown as={Nav.Item} key={path} show={dropdownOpen === path} onToggle={open => setDropdownOpen(open ? path : null)} focusFirstItemOnShow="keyboard"
                 style={{ '--bs-dropdown-link-color': colors.green, '--bs-dropdown-link-hover-color': '#fff', '--bs-dropdown-link-hover-bg': colors.green, '--bs-dropdown-link-active-bg': colors.green }}>
                 <Dropdown.Toggle as="button" type="button" id={`${path.slice(1)}-dropdown`} aria-haspopup="true" aria-expanded={dropdownOpen === path}
@@ -48,8 +36,8 @@ export default function SiteHeader() {
                   {label}
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="shadow-sm rounded-0 p-2" style={{ minWidth: 230, borderColor: colors.border, borderTop: `3px solid ${colors.gold}` }}>
-                  {dropdowns[path].map(([title, slug]) => <Dropdown.Item as={NavLink} key={slug} to={path + '/' + slug}
-                    className="py-3 px-3" onClick={closeMenu} active={pathname.replace(/\/$/, '') === path + '/' + slug}>{title}</Dropdown.Item>)}
+                  {children.map(({ label: title, path: childPath }) => <Dropdown.Item as={NavLink} key={childPath} to={childPath}
+                    className="py-3 px-3" onClick={closeMenu} active={pathname.replace(/\/$/, '') === childPath}>{title}</Dropdown.Item>)}
                 </Dropdown.Menu>
               </Dropdown>
             ) : (

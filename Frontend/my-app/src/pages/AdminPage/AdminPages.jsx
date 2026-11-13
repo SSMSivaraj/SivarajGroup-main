@@ -1,3 +1,4 @@
+import { navigationGroups, navigationLabel } from '../../config/navigation.js'
 import { useEffect, useRef, useState } from 'react'
 import { Alert, Col, Container, Form, Row, Spinner, Table } from 'react-bootstrap'
 import { Navigate, Outlet, useNavigate, useOutletContext, useSearchParams } from 'react-router-dom'
@@ -13,7 +14,17 @@ const titleStyle = { fontFamily: 'Georgia, serif', color: '#063F35' }
 const pageGroup = code => sectionPages[code]?.category || (Object.hasOwn(knowUsBetterImageSections, code) ? 'Know Us Better' : code === 'SPINNING' || Object.hasOwn(frameworkImageSections, code) ? 'Framework' : 'Other Pages')
 const pageLabel = code => sectionPages[code]?.title || (code === 'CSR' ? 'CSR' : imagePositionLabel('', code))
 function PageOptions({ pages }) {
-  return [...new Set(pages.map(pageGroup))].map(group => <optgroup key={group} label={group}>{pages.filter(code => pageGroup(code) === group).map(code => <option key={code} value={code}>{pageLabel(code)}</option>)}</optgroup>)
+  const validPages = pages.filter(code => Object.hasOwn(pageSections, code))
+  const groupOf = code => code === 'WELCOME_WAY' ? 'Welcome Way' : pageGroup(code)
+  const groups = [...new Set(validPages.map(groupOf))]
+  const order = group => navigationGroups.find(item => item.key === group)?.displayOrder ?? Infinity
+  return groups.sort((a, b) => order(a) - order(b)).map(group => {
+    const childOrder = code => {
+      const index = navigationGroups.find(item => item.key === group)?.children.findIndex(child => child.label === pageLabel(code)) ?? -1
+      return index < 0 ? Infinity : index
+    }
+    return <optgroup key={group} label={navigationLabel(group)}>{validPages.filter(code => groupOf(code) === group).sort((a, b) => childOrder(a) - childOrder(b)).map(code => <option key={code} value={code}>{pageLabel(code)}</option>)}</optgroup>
+  })
 }
 async function request(path, options = {}) {
   const response = await fetch(api(path), { ...options, credentials: 'include' })

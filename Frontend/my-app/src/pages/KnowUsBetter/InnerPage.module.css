@@ -25,5 +25,29 @@
 .enquiry { background: #082f28; color: #fff; }
 .enquiry h2, .enquiry p, .enquiry .label { color: #e5ece8; }
 .page a:focus-visible { outline: 3px solid #b88a3b; outline-offset: 5px; }
+/* Scope presentation changes to Enlightenment and Goods, excluding shared heroes. */
+.reviewedPages .section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: .5rem;
+}
+.reviewedPages .section p { max-width: 75ch; line-height: 1.75; }
+.reviewedPages .section :global(.col-lg-7),
+.reviewedPages .section :global(.col-lg-12) { min-width: 0; }
+.reviewedPages .range { align-items: stretch; column-gap: 1.5rem; }
+.reviewedPages .range li { min-width: 0; }
+.reviewedPages .catalogue li { display: flex; flex-direction: column; }
+.reviewedPages .catalogue span { padding: .8rem .25rem 0; }
+.reviewedPages .table { min-width: 0; table-layout: fixed; }
+.reviewedPages .table tbody th { width: 38%; }
+@media (max-width: 575px) {
+  .reviewedPages .table th, .reviewedPages .table td { padding: .75rem .5rem; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .reviewedPages.goods .catalogue { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
 @media(max-width:767px) { .range, .goods .catalogue { grid-template-columns: minmax(0,1fr); } }
 @media(prefers-reduced-motion:reduce) { .page { scroll-behavior: auto; } }

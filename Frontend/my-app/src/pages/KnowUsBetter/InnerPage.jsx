@@ -1,3 +1,4 @@
+import { navigationGroup } from '../../config/navigation.js'
 import EnquiryBanner from '../../Components/EnquiryBanner/EnquiryBanner.jsx'
 import { imageSlot } from '../../config/imageSlots.js'
 import PageGroupTabs from '../../Components/Navigation/PageGroupTabs.jsx'
@@ -12,8 +13,14 @@ import styles from './InnerPage.module.css'
 export default function InnerPage({ config }) {
   return <Page key={config.pageCode} config={{ ...sectionPages[config.pageCode], ...config }} />
 }
-function Specification({ row }) {
-  const lines = row.body_content?.split('\n').filter(Boolean) || []
+function Specification({ row, product = false }) {
+  const lines = row.body_content?.split(product ? /\r?\n/ : '\n').filter(line => product ? line.trim().length > 0 : Boolean(line)) || []
+  if (product) return <div className="table-responsive"><table className={styles.table}><caption>{row.heading}</caption><tbody>{lines.map((line, index) => {
+    const separator = line.indexOf(': ')
+    return separator < 0
+      ? <tr key={index}><td colSpan={2}>{line}</td></tr>
+      : <tr key={index}><th scope="row">{line.slice(0, separator)}</th><td>{line.slice(separator + 2)}</td></tr>
+  })}</tbody></table></div>
   return <div className="table-responsive"><table className={styles.table}><caption>{row.heading}</caption><thead><tr><th scope="col">{row.section_code === 'APPLICATIONS' ? 'Published detail' : 'Testing / checking'}</th><th scope="col">{row.section_code === 'APPLICATIONS' ? 'Specification' : 'Instrument make'}</th></tr></thead><tbody>{lines.map((line,index) => {
     const separator = line.includes(' — ') ? ' — ' : ': '
     const [name,...value] = line.split(separator)
@@ -29,6 +36,8 @@ function ProductRange({ data, row, config }) {
   })}</ul>
 }
 function Page({ config }) {
+  const group = navigationGroup(config.category)
+  const scopedPresentation = ['Enlightenment', 'Goods'].includes(config.category)
   const data = useWebsitePage(config.pageCode, config.title)
   const hero = data.lookup.PAGE_HERO
   const enquiry = data.lookup.ENQUIRY_BANNER
@@ -36,10 +45,10 @@ function Page({ config }) {
   const primary = primaryImagePositions[data.page] || {}
   const contentCodes = new Set(data.rows.map(row => row.section_code))
   const documentSlots = Object.keys(data.images).filter(code => imageSlot(data.page,code) && !contentCodes.has(code) && /^(CERTIFICATE_|REWARD_GALLERY)/.test(code))
-  return <main className={`${styles.page} ${config.category === 'Goods' ? styles.goods : ''}`} aria-busy={data.loading}>
+  return <main className={`${styles.page} ${config.category === 'Goods' ? styles.goods : ''} ${scopedPresentation ? styles.reviewedPages : ''}`} aria-busy={data.loading}>
     <PageHero pageCode={data.page} src={metadata ? imageUrl(data.page,'PAGE_HERO',metadata) : undefined} alt={metadata?.alt_text || `${config.title} at Sivaraj Group`}><Container><div className={styles.heroCopy}>
-      <nav aria-label="Breadcrumb"><Link to="/">Home</Link> / <Link to={`/${config.category.toLowerCase()}`}>{config.category}</Link> / <span aria-current="page">{config.title}</span></nav>
-      <p className={styles.label}>{config.category}</p><h1>{config.title}</h1>{hero?.heading && hero.heading !== config.title && <p>{hero.heading}</p>}{hero?.subheading && <p>{hero.subheading}</p>}<Copy text={hero?.body_content} />{hero?.button_text && <Action url={hero.button_url}>{hero.button_text}</Action>}
+      <nav aria-label="Breadcrumb"><Link to="/">Home</Link> / <Link to={group.path}>{group.label}</Link> / <span aria-current="page">{config.title}</span></nav>
+      <p className={styles.label}>{group.label}</p><h1>{config.title}</h1>{hero?.heading && hero.heading !== config.title && <p>{hero.heading}</p>}{hero?.subheading && <p>{hero.subheading}</p>}<Copy text={hero?.body_content} />{hero?.button_text && <Action url={hero.button_url}>{hero.button_text}</Action>}
     </div></Container></PageHero>
     <PageGroupTabs group={config.category} />
     {data.loading && <Container className="py-3" role="status">Loading {config.title.toLowerCase()}…</Container>}
@@ -49,7 +58,7 @@ function Page({ config }) {
       const photograph = primary[row.section_code] || supporting
       return <section key={row.content_id || row.section_code} id={row.section_code} className={`${styles.section} ${index % 2 ? styles.paper : ''}`}><Container><Row className="g-4 g-lg-5 align-items-center">
         {photograph && <Col lg={5} className={index % 2 ? 'order-lg-2' : ''}><Photo data={data} code={row.section_code} alt={row.heading || config.title} />{supporting && <div className="mt-4"><Photo data={data} code="GARMENT_APPLICATIONS" alt="Garment showcase" /></div>}</Col>}
-        <Col lg={photograph ? 7 : 12}><p className={styles.label}>{row.subheading || `${config.category} / ${config.title}`}</p><h2>{row.heading}</h2>{config.tables?.includes(row.section_code) ? <Specification row={row} /> : config.lists?.includes(row.section_code) ? <ProductRange data={data} row={row} config={config} /> : <Copy text={row.body_content} />}{row.button_text && <Action url={row.button_url}>{row.button_text}</Action>}</Col>
+        <Col lg={photograph ? 7 : 12}><p className={styles.label}>{row.subheading || `${config.category} / ${config.title}`}</p><h2>{row.heading}</h2>{config.tables?.includes(row.section_code) ? <Specification row={row} product={config.category === 'Goods'} /> : config.lists?.includes(row.section_code) ? <ProductRange data={data} row={row} config={config} /> : <Copy text={row.body_content} />}{row.button_text && <Action url={row.button_url}>{row.button_text}</Action>}</Col>
       </Row></Container></section>
     })}
     {Object.keys(primary).filter(code => code !== 'PAGE_HERO' && !contentCodes.has(code) && !documentSlots.includes(code) && !(code === 'GARMENT_APPLICATIONS' && contentCodes.has('PRODUCT_RANGE')) && data.images[code]).map(code => <Container key={code} className="py-4"><Photo data={data} code={code} alt={primary[code].label} /></Container>)}
