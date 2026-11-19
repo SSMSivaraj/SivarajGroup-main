@@ -1,3 +1,4 @@
+import { welcomeWayHeaderPosition, welcomeWayImageUrl } from '../../pages/WelcomeWayPage/welcomeWayImages.js'
 import { useEffect, useState } from 'react'
 import styles from './HeaderGraphics.module.css'
 
@@ -18,7 +19,7 @@ export default function HeaderGraphics() {
         if (!response.ok) return
         const result = await response.json()
         if (controller.signal.aborted || current !== sequence || !Array.isArray(result.data)) return
-        setGraphic(result.data.find(row => row.section_code === 'HEADER_GRAPHICS' && row.is_active !== false && row.is_active !== 0) || null)
+        setGraphic(result.data.find(row => row.section_code === welcomeWayHeaderPosition.sectionCode && row.is_active !== false && row.is_active !== 0) || null)
       } catch { /* Keep the navigation usable when the image service is unavailable. */ }
     }
     const onStorage = event => { if (event.key === 'website-image-revision') refresh() }
@@ -38,7 +39,7 @@ export default function HeaderGraphics() {
   }, [])
   if (!graphic) return null
   const revision = graphic.updated_at || graphic.created_at || ''
-  const src = `${endpoint}/HEADER_GRAPHICS?v=${encodeURIComponent(revision)}`
+  const src = `${welcomeWayImageUrl(welcomeWayHeaderPosition.sectionCode)}?v=${encodeURIComponent(revision)}`
   return <GraphicImage key={src} src={src} alt={graphic.alt_text || 'Sivaraj Group textile journey'} />
 }
 function GraphicImage({ src, alt }) {

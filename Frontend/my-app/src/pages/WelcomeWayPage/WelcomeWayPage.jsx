@@ -1,25 +1,6 @@
 import heroStyles from '../../Components/PageHero/PageHero.module.css'
 import { Carousel } from 'react-bootstrap'
-import mdImage from '../../assets/slideshow/md-placeholder.png'
-import leadershipImage from '../../assets/slideshow/leadership.jpeg'
-import cottonImage from '../../assets/slideshow/cotton.png'
-import spinningImage from '../../assets/slideshow/spinning-oe.png'
-import weavingImage from '../../assets/slideshow/weaving.png'
-import knittingImage from '../../assets/slideshow/knitting.png'
-import garmentsImage from '../../assets/slideshow/garments-pos.png'
-import homeTextilesImage from '../../assets/slideshow/home-textiles.png'
-
-const fabricImage = `${import.meta.env.VITE_API_BASE_URL || ''}/api/website/page-images/welcome-way/fabric-rolls`
-const slides = [
-  { image: leadershipImage, eyebrow: 'Leadership', title: 'A vision woven into every possibility.', description: 'Guiding Sivaraj Group with purpose, progress and enduring values.', position: 'right center', fit: 'contain' },
-  { image: cottonImage, eyebrow: 'Cotton', title: 'Rooted in nature. Refined by expertise.', description: 'Responsible fibre is where our journey begins.', position: 'center' },
-  { image: spinningImage, eyebrow: 'Spinning & OE', title: 'Precision in every strand.', description: 'Advanced spinning technology engineered for consistent quality.', position: 'center' },
-  { image: weavingImage, eyebrow: 'Weaving', title: 'Crafting strength into every weave.', description: 'Modern looms bring performance and possibility together.', position: 'center' },
-  { image: knittingImage, eyebrow: 'Knitting', title: 'Innovation shaped for comfort.', description: 'Fine knitted fabrics made with care, speed and precision.', position: 'center' },
-  { image: fabricImage, fallback: mdImage, eyebrow: 'Our Fabrics', title: 'Colour, quality and possibilities.', description: 'Discover the textile expertise of Sivaraj Group.', position: 'center' },
-  { image: garmentsImage, eyebrow: 'Garments & POS', title: 'From thoughtful design to the marketplace.', description: 'Contemporary apparel and retail solutions created to connect.', position: 'center' },
-  { image: homeTextilesImage, eyebrow: 'Home Textiles', title: 'Comfort, beautifully woven.', description: 'Elevated home collections with natural texture and timeless appeal.', position: 'center' },
-]
+import { welcomeWaySlides as slides, welcomeWayImageUrl } from './welcomeWayImages.js'
 
 export default function WelcomeWayPage() {
   return (
@@ -29,12 +10,12 @@ export default function WelcomeWayPage() {
           <Carousel.Item key={slide.eyebrow}>
             <div style={{ height: 'clamp(480px, calc(100vh - 74px), 760px)', position: 'relative', overflow: 'hidden' }}>
               <img
-                data-image-page={slide.image === fabricImage ? 'WELCOME_WAY' : undefined}
-                data-image-position={slide.image === fabricImage ? 'FABRIC_ROLLS' : undefined}
-                src={slide.image}
-                onError={slide.fallback ? (event) => {
-                  if (event.currentTarget.getAttribute('src') !== slide.fallback) event.currentTarget.src = slide.fallback
-                } : undefined}
+                data-image-page="WELCOME_WAY"
+                data-image-position={slide.sectionCode}
+                src={welcomeWayImageUrl(slide.sectionCode)}
+                onError={(event) => {
+                  if (event.currentTarget.getAttribute('src') !== slide.image) event.currentTarget.src = slide.image
+                }}
                 alt={`${slide.eyebrow} at Sivaraj Group`}
                 className="d-block w-100 h-100"
                 style={{ objectFit: slide.fit || 'cover', objectPosition: slide.position, backgroundColor: slide.fit === 'contain' ? '#fff' : undefined }}

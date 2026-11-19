@@ -1,3 +1,4 @@
+import { welcomeWaySlides } from '../WelcomeWayPage/welcomeWayImages.js'
 import { navigationGroups, navigationLabel } from '../../config/navigation.js'
 import { useEffect, useRef, useState } from 'react'
 import { Alert, Col, Container, Form, Row, Spinner, Table } from 'react-bootstrap'
@@ -88,6 +89,22 @@ function ImagePreview({ page, section, version, active = true, alt = 'Current we
   const [failed, setFailed] = useState(false)
   return <div className="border d-flex align-items-center justify-content-center overflow-hidden" style={{ aspectRatio: '4 / 3', background: '#E6E2DA' }}>{active && !failed ? <img src={`${api(`page-images/${encodeURIComponent(page)}/${encodeURIComponent(section)}`)}?v=${encodeURIComponent(version || '')}`} alt={alt} loading="lazy" onError={() => setFailed(true)} style={{ width: '100%', height: '100%', objectFit: 'contain' }} /> : <span className="small text-center p-2">{active ? 'Image unavailable' : 'Inactive image'}</span>}</div>
 }
+function SlideUploadControls({ slide, label, row, index, busy, selectFile, upload, deleteImage }) {
+  const [selection, setSelection] = useState(null)
+  const [fileKey, setFileKey] = useState(0)
+  useEffect(() => () => { if (selection?.url) URL.revokeObjectURL(selection.url) }, [selection])
+  async function save(event) {
+    const saved = await upload(event, { page: 'WELCOME_WAY', section: slide.sectionCode, selection, altText: row?.alt_text || '', order: String(row?.display_order ?? index + 1) })
+    if (saved) { setSelection(null); setFileKey(value => value + 1) }
+  }
+  return <Form onSubmit={save} className="mt-2"><fieldset disabled={busy}>
+    <Form.Label htmlFor={'slide-file-' + slide.sectionCode}>Choose Image for {label}</Form.Label>
+    <Form.Control key={fileKey} id={'slide-file-' + slide.sectionCode} type="file" accept=".webp,.jpg,.jpeg,.png,image/webp,image/jpeg,image/png" onChange={event => selectFile(event, setSelection, false)} />
+    <p className="small text-secondary mt-2">WebP, JPEG or PNG, maximum 600 KB.</p>
+    {selection && <><p className="small mt-2">{selection.file.name}</p><img src={selection.url} alt={'Selected image for ' + label} className="border w-100 mb-2" style={{ aspectRatio: '4 / 3', objectFit: 'contain' }} /></>}
+    <div className="d-flex flex-wrap gap-2"><button type="submit" className="btn border" disabled={busy || !selection}>{busy ? 'Saving?' : row ? 'Replace' : 'Upload'}</button>{row && <button type="button" className="btn btn-danger" onClick={() => deleteImage(row)}>Delete Image</button>}</div>
+  </fieldset></Form>
+}
 export function WebsiteImagesAdminPage() {
   const user = useOutletContext()
   const navigate = useNavigate()
@@ -101,7 +118,16 @@ export function WebsiteImagesAdminPage() {
   const [revision, setRevision] = useState(0)
   const [loading, setLoading] = useState(true)
   const [busy, setBusy] = useState(false)
-  const [error, setError] = useState('')
+  const [errorState, setErrorState] = useState({ message: '', version: 0 })
+  const error = errorState.message
+  const errorRef = useRef(null)
+  function setError(message) { setErrorState(previous => ({ message, version: previous.version + 1 })) }
+  useEffect(() => {
+    if (error) {
+      errorRef.current?.focus({ preventScroll: true })
+      errorRef.current?.scrollIntoView({ behavior: 'instant', block: 'center' })
+    }
+  }, [error, errorState.version])
   const mutationLock = useRef(false)
   const [notice, setNotice] = useState('')
   const [uploadNotice, setUploadNotice] = useState('')
@@ -156,27 +182,27 @@ export function WebsiteImagesAdminPage() {
     setPage('SPINNING'); setSection('PAGE_HERO_1')
     setSelection(null); setReplacement(null); setAltText(''); setOrder('1'); setFileKey(value => value + 1)
   }
-  function selectFile(event) {
+  function selectFile(event, updateSelection = setSelection, allowAnimation = graphicsClip) {
     const file = event.target.files?.[0]
-    setSelection(null); setError(''); setNotice(''); setUploadNotice('')
+    updateSelection(null); setError(''); setNotice(''); setUploadNotice('')
     if (!file) return
     const validImage = /\.(webp|jpe?g|png)$/i.test(file.name) && ['image/webp', 'image/jpeg', 'image/png'].includes(file.type)
-    const validAnimation = graphicsClip && /\.gif$/i.test(file.name) && file.type === 'image/gif'
+    const validAnimation = allowAnimation && /\.gif$/i.test(file.name) && file.type === 'image/gif'
     if (!validImage && !validAnimation) {
-      setError(graphicsClip ? 'Choose an animated WebP or GIF, or a PNG/JPEG graphic.' : 'Choose a WebP, JPEG or PNG image.'); event.target.value = ''; return
+      setError(allowAnimation ? 'Choose an animated WebP or GIF, or a PNG/JPEG graphic.' : 'Choose a WebP, JPEG or PNG image.'); event.target.value = ''; return
     }
     if (!file.size || file.size > 614400) { setError('Choose a non-empty image no larger than 600 KB.'); event.target.value = ''; return }
-    setSelection({ file, url: URL.createObjectURL(file) })
+    updateSelection({ file, url: URL.createObjectURL(file) })
   }
-  async function upload(event) {
+  async function upload(event, target = { page, section, selection, altText, order }) {
     event.preventDefault(); if (mutationLock.current) return; setError(''); setNotice(''); setUploadNotice('')
-    if (!selection) { setError('Select an image before uploading.'); return }
+    if (!target.selection) { setError('Select an image before uploading.'); return false }
     mutationLock.current = true; setBusy(true)
     const body = new FormData()
-    body.append('image', selection.file); body.append('altText', altText); body.append('displayOrder', order)
+    body.append('image', target.selection.file); body.append('altText', target.altText); body.append('displayOrder', target.order)
     try {
-      const result = await request(`page-images/${page}/${section}`, { method: 'PUT', body })
-      setUploadNotice(result.message || 'Image uploaded successfully.'); setSelection(null); setReplacement(null); setFileKey(value => value + 1); refresh()
+      const result = await request(`page-images/${target.page}/${target.section}`, { method: 'PUT', body })
+      setUploadNotice(result.message || 'Image uploaded successfully.'); setNotice(result.message || 'Image uploaded successfully.'); setSelection(null); setReplacement(null); setFileKey(value => value + 1); refresh(); return true
     } catch (error) { report(error) }
     finally { mutationLock.current = false; setBusy(false) }
   }
@@ -217,8 +243,20 @@ export function WebsiteImagesAdminPage() {
   const sections = [...new Set([...(pageSections[page] || standardSections), ...(replacement ? [replacement.section_code] : [])])]
   const current = replacement || layoutRows.find(row => row.section_code === section)
   return <AdminShell><header className="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4"><div><h1 className="h2" style={titleStyle}>Website Image Management</h1><p className="mb-0">{user.display_name || user.username} · {user.role_code}</p></div><button className="btn border" onClick={logout} disabled={busy}>Logout</button></header>
-    {error && <Alert variant="danger" role="alert">{error}</Alert>}{notice && <Alert variant="success" role="status">{notice}</Alert>}
+    {error && <Alert ref={errorRef} tabIndex={-1} variant="danger" role="alert">{error}</Alert>}{notice && <Alert variant="success" role="status">{notice}</Alert>}
     <section aria-label="Image filters" className="border bg-white p-4 mb-4"><Row className="g-3 align-items-end"><Col md={5}><Form.Label htmlFor="page-filter">Page</Form.Label><Form.Select id="page-filter" value={pageFilter} onChange={event => { setLoading(true); setPageFilter(event.target.value) }}><option value="">All pages</option><PageOptions pages={pages} /></Form.Select></Col><Col md={4}><Form.Label htmlFor="active-filter">Status</Form.Label><Form.Select id="active-filter" value={activeFilter} onChange={event => { setLoading(true); setActiveFilter(event.target.value) }}><option value="">All statuses</option><option value="true">Active</option><option value="false">Inactive</option></Form.Select></Col><Col md={3}><button className="btn border" onClick={refresh} disabled={loading || busy}>Refresh</button></Col></Row></section>
+    {page === 'WELCOME_WAY' && <section aria-label="Welcome Way slideshow images" className="border bg-white p-4 mb-4">
+      <h2 className="h4 mb-4" style={titleStyle}>Welcome Way slideshow images</h2>
+      {layout.key !== layoutKey ? <Loading>Loading slideshow images?</Loading> : layout.error ? <Alert variant="danger">{layout.error}</Alert> : <Row className="g-4">{welcomeWaySlides.map((slide, index) => {
+        const row = layoutRows.find(item => item.section_code === slide.sectionCode)
+        const label = positionLabel('WELCOME_WAY', slide.sectionCode)
+        return <Col md={6} lg={3} key={slide.sectionCode}><h3 className="h6">{label}</h3>
+          {row ? <ImagePreview key={slide.sectionCode + revision} page="WELCOME_WAY" section={slide.sectionCode} version={String(revision)} active={!!row.is_active} alt={row.alt_text || label} /> : <img src={slide.image} alt={label + ' default image'} className="border w-100" style={{ aspectRatio: '4 / 3', objectFit: 'contain' }} />}
+          {!row && <p className="small text-secondary mt-2">Default image - No upload yet</p>}
+          {editor && <SlideUploadControls slide={slide} label={label} row={row} index={index} busy={busy} selectFile={selectFile} upload={upload} deleteImage={deleteImage} />}
+        </Col>
+      })}</Row>}
+    </section>}
     {editor ? <section id="image-upload-form" className="border bg-white p-4 mb-4"><h2 className="h4 mb-4" style={titleStyle}>{replacement ? 'Replace Website Image' : 'Upload or Replace Image'}</h2><Form onSubmit={upload}><fieldset disabled={busy}><Row className="g-3"><Col md={6}><Form.Label htmlFor="upload-page">Page</Form.Label><Form.Select id="upload-page" value={page} disabled={!!replacement} onChange={event => { setPage(event.target.value); setSection((pageSections[event.target.value] || standardSections)[0]); setSelection(null); setFileKey(value => value + 1); setAltText(''); setUploadNotice(''); setOrder('1') }}><PageOptions pages={pages} /></Form.Select></Col><Col md={6}><Form.Label htmlFor="upload-section">Section</Form.Label><Form.Select id="upload-section" value={section} disabled={!!replacement} onChange={event => { const code = event.target.value; setSection(code); setSelection(null); setFileKey(value => value + 1); setAltText(''); setUploadNotice(''); setOrder(String(position(page, code)?.displayOrder ?? Math.max(0, sections.indexOf(code)))) }}>{primaryImagePositions[page] ? <><optgroup label="Primary image positions">{Object.keys(primaryImagePositions[page]).map(code => <option key={code} value={code}>{positionLabel(page, code)}</option>)}</optgroup><optgroup label="Existing additional positions">{sections.filter(code => !primaryImagePositions[page][code]).map(code => <option key={code} value={code}>{positionLabel(page, code)}</option>)}</optgroup></> : sections.map(code => <option key={code} value={code}>{positionLabel(page, code)}</option>)}</Form.Select></Col><Col md={8}><Form.Label htmlFor="upload-file">{graphicsClip ? 'Graphics Clip (maximum 600 KB)' : 'Image (maximum 600 KB)'}</Form.Label>{graphicsClip && <p className="small text-secondary">Upload a wide animated WebP/GIF or a PNG/JPEG graphic. Shown above all Welcome Way slides between the logo and navigation on large screens. Recommended: 480 × 64 px with a transparent background. Hidden below 1400 px and when reduced motion is enabled. SVG and video uploads are not supported.</p>}<Form.Control key={fileKey} id="upload-file" type="file" accept={graphicsClip ? '.webp,.gif,.jpg,.jpeg,.png,image/webp,image/gif,image/jpeg,image/png' : '.webp,.jpg,.jpeg,.png,image/webp,image/jpeg,image/png'} onChange={selectFile} />{selection && <p className="small mt-2">{selection.file.name} · {(selection.file.size / 1024).toFixed(1)} KB</p>}</Col><Col md={4}><Form.Label htmlFor="upload-order">Display order</Form.Label><Form.Control id="upload-order" type="number" min="0" max="2147483647" step="1" required value={order} onChange={event => setOrder(event.target.value)} /></Col><Col xs={12}><Form.Label htmlFor="upload-alt">Alternative text</Form.Label><Form.Control id="upload-alt" placeholder={position(page, section)?.altPlaceholder} maxLength={500} value={altText} onChange={event => setAltText(event.target.value)} /></Col></Row><Row className="g-4 my-2"><Col md={6}><h3 className="h6">Current image</h3>{current ? <ImagePreview key={`${page}-${section}-${revision}`} page={page} section={section} version={current.updated_at || current.created_at || revision} active={!!current.is_active} alt={current.alt_text || 'Current website image'} /> : <p className="text-secondary">{layout.key !== layoutKey ? 'Checking current image…' : layout.error || 'No image is currently uploaded.'}</p>}</Col><Col md={6}><h3 className="h6">Selected image</h3>{selection ? <img src={selection.url} alt="Preview of the selected upload" className="border w-100" style={{ aspectRatio: '4 / 3', objectFit: 'contain', background: '#E6E2DA' }} /> : <p className="text-secondary">Select an image to preview it here.</p>}</Col></Row>{uploadNotice && <Alert variant="success" role="status" className="mt-3">{uploadNotice}</Alert>}<div className="d-flex flex-wrap gap-3"><button className="btn" style={button} type="submit">{busy ? 'Saving…' : 'Upload / Replace'}</button>{current && <button className="btn btn-danger" type="button" disabled={busy} onClick={() => deleteImage(current)}>Delete Image</button>}<button className="btn border" type="button" onClick={reset}>Cancel / Reset</button></div><p className="small text-secondary mt-3 mb-0">Uploading replaces the same page and section and activates the image.</p></fieldset></Form></section> : <Alert variant="light">Your account has view-only access.</Alert>}
     <section className="border bg-white p-4"><h2 className="h4 mb-4" style={titleStyle}>Existing Images</h2>{loading ? <Loading>Loading image metadata…</Loading> : rows.length ? <Table responsive striped className="align-middle"><thead><tr>{['Preview', 'Page / Section', 'File', 'Alternative text', 'Order', 'Status', 'Updated by / at', 'Actions'].map(label => <th key={label}>{label}</th>)}</tr></thead><tbody>{rows.map(row => <tr key={row.image_id}><td><div style={{ width: 96 }}><ImagePreview key={`${row.image_id}-${revision}`} page={row.page_code} section={row.section_code} version={`${row.updated_at || row.created_at}-${revision}`} active={!!row.is_active} alt={row.alt_text || 'Website image'} /></div></td><td>{row.page_code}<br /><span className="small">{row.section_code}</span></td><td>{row.image_name}<br /><span className="small">{row.image_type} · {(row.image_size_bytes / 1024).toFixed(1)} KB</span></td><td>{row.alt_text || '—'}</td><td>{row.display_order}</td><td>{row.is_active ? 'Active' : 'Inactive'}</td><td>{row.updated_by || row.created_by}<br /><span className="small">{new Date(row.updated_at || row.created_at).toLocaleString()}</span></td><td>{editor ? <div className="d-flex flex-wrap gap-2"><button className="btn btn-sm border" disabled={busy} onClick={() => replace(row)}>Replace</button><button className="btn btn-sm btn-danger" type="button" disabled={busy} onClick={() => deleteImage(row)}>Delete Image</button><button className="btn btn-sm border" disabled={busy} onClick={() => changeStatus(row)}>{row.is_active ? 'Deactivate' : 'Activate'}</button></div> : 'View only'}</td></tr>)}</tbody></Table> : <p className="text-secondary">No images match these filters.</p>}</section>
   </AdminShell>
